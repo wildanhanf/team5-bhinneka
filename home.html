@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="/styles/home-styles.css"/>
+        <script src="scripts/indexHome.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <link rel="icon" type="image/png" href="/images/logo-sangpisang.png">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    </head>
+    
+    <body>
+      <header>
+        <nav class="nav-bar">
+            <div>
+                <a href="home.html">
+                    <img src="/images/logo-sangpisang.png" class="logo" alt="logo perusahaan">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul class="menu-bar">
+                    <li><a class="nav-link" href="home.html">Home</a></li>
+                    <li><a class="nav-link" href="menu.html">Shop</a></li>
+                    <li><a class="nav-link" href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="#" style="margin-right: 12px;">
+                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 22.9999H8.725L5.2375 3.82488C5.1967 3.59525 5.07691 3.3871 4.89887 3.23645C4.72082 3.08579 4.49572 3.00211 4.2625 2.99988H2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 27.9999C11.3807 27.9999 12.5 26.8806 12.5 25.4999C12.5 24.1192 11.3807 22.9999 10 22.9999C8.61929 22.9999 7.5 24.1192 7.5 25.4999C7.5 26.8806 8.61929 27.9999 10 27.9999Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23 27.9999C24.3807 27.9999 25.5 26.8806 25.5 25.4999C25.5 24.1192 24.3807 22.9999 23 22.9999C21.6193 22.9999 20.5 24.1192 20.5 25.4999C20.5 26.8806 21.6193 27.9999 23 27.9999Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.81262 18H23.5126C23.9801 18.0014 24.4331 17.838 24.792 17.5386C25.1509 17.2391 25.3928 16.8227 25.4751 16.3625L27.0001 8H6.00012" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <ellipse cx="27" cy="6" rx="6" ry="6" fill="#FF0000"/>
+                        </svg>                        
+                </a>
+                <button
+                    class="nav-profile dropdown-btn"
+                    data-dropdown="dropdown1"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="discover"
+                    >
+                    Hi, Team 5!
+                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown1" class="dropdown">
+                    <ul role="menu">
+                        <li role="menu-item">
+                            <a class="dropdown-link" href="#">Profile</a>
+                        </li>
+                        <li role="menu-item">
+                            <a class="dropdown-link" href="#">My Order</a>
+                        </li>
+                        <li role="menu-item">
+                            <a class="dropdown-link" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="hamburger" onclick="toggleHamburger()" aria-label="Main Menu">
+                    <svg width="45" height="45" viewBox="0 0 100 100">
+                      <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                      <path class="line line2" d="M 20,50 H 80" />
+                      <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+      </header>
+
+
+        </br>
+    <!--CAROUSEL-->
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/C3.png" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/C2.png" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/C1.png" alt="Image 3">
+            </div>
+                <a class="carousel-prev" href="#"><i class="fas fa-chevron-left"></i></a>
+                <a class="carousel-next" href="#"><i class="fas fa-chevron-right"></i></a>
+            <div class="carousel-indicators">
+                <span class="carousel-indicator active"></span>
+                <span class="carousel-indicator"></span>
+                <span class="carousel-indicator"></span>
+            </div>
+
+            <br>
+            <br>
+        </div>
+
+    <!--POPULAR MENU-->
+        <center>
+            <div class='popular'>
+            <h2>Our Popular Menu
+        </center>
+        <div class="menu">
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/Menu1.jpg">
+                        <img src="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/Menu1.jpg" alt="Menu1">
+                    </a>
+                    <div class="desc">Banan Roll Coklat</div>
+                </div>
+            </div>      
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/Menu2.jpg">
+                        <img src="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/Menu2.jpg" alt="Menu2">
+                    </a>
+                    <div class="desc">Naget Pisang Tiramisu</div>
+                </div>
+            </div>     
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/Menu3.jpg">
+                        <img src="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/Menu3.jpg" alt="Menu3">
+                    </a>
+                    <div class="desc">Banana Strips</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/Menu4.jpg">
+                        <img src="https://stackblitz.com/files/web-platform-ckmser/github/ChirCayo/Sang-Pisang-/main/Image/Menu4.jpg" alt="Menu4">
+                    </a>
+                    <div class="desc">Naget Pisang Coklat</div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        
+        <!--ALL MENU BUTTON-->
+        <div class="btn-container">
+             <a href="menu.html" class="btn">All Menu</a>
+        </div>
+
+        <!-- <section for Review> -->
+        <section class="review" id="review">
+          <h1 class="heading">CUSTOMER'S <span> REVIEW </span></h1>
+
+          <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <center>
+                  <img
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN2lpQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--871b8ee7f290bc5fbb14d87e60e1d27d1eb1115b/Namjoon.jpg"
+                    alt=""
+                  />
+                </center>
+                <p>
+                  "Pertama kali makan pisang nugget dan langsung jatuh cinta sama
+                  rasanya!"
+                </p>
+                <b><h3>Kim Namjoon</h3></b>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <center>
+                  <img
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN3lpQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5970d95570158404c8f5958c3af1fc6b455805b0/Seokjin.jpg"
+                    alt=""
+                  />
+                </center>
+                <p>
+                  "Asli ini enak banget! Pisangnya tebel, toppingnya banyak,
+                  crispynya juga dapet"
+                </p>
+                <b><h3>Kim Seokjin</h3></b>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <center>
+                  <img
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN1NpQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3e5700913c62ac3e0549ef5f814903deea623047/Yoongi.jpg"
+                    alt=""
+                  />
+                </center>
+                <p>
+                  "Rasa enak, topping banyak dan bervariasi, harga terjangkau.
+                  Cuma agak lama nunggunya"
+                </p>
+                <b><h3>Min Yoongi</h3></b>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <center>
+                  <img
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN3FpQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4bd07d951838fd850e02f1ca8fb6aefe9638bdf0/Hoseok.jpg"
+                    alt=""
+                  />
+                </center>
+                <p>
+                  "Sumpah ini enaaak, apalagi ice banananya. Dulu beli pas
+                  ada promo jadi murah bangeet"
+                </p>
+                <b><h3>Jung Hoseok</h3></b>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <center>
+                  <img
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN21pQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5634ec07add3823ae3e40c00f5a2dbade04b7e18/Jimin.jpg"
+                    alt=""
+                  />
+                </center>
+                <p>
+                  "Salah satu pisang nugget terenak, variasi topping juga banyak.
+                  Harga terjangkau"
+                </p>
+                <b><h3>Park Jimin</h3></b>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <center>
+                  <img
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzZpQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--94d22d29204fbc19da486e0cf86abf28f69d35c5/V.jpg"
+                    alt=""
+                  />
+                </center>
+                <p>
+                  "Rasa nuggetnya enak, apalagi ditambah topping almondnya. Agak
+                  pricey tapi worth it sih"
+                </p>
+                <b><h3>Kim Taehyung</h3></b>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <center>
+                  <img
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzJpQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d1f5a6ffd9d2de85de6047348f20a72c289a0f84/Jeongguk.jpg"
+                    alt=""
+                  />
+                </center>
+                <p>
+                  "Ice Banana paling enak yang pernah Kookie coba, apalagi yang
+                  avocado. Jadi mau lagii!!"
+                </p>
+                <b><h3>Jeon Jungkook</h3></b>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <a class="button-link" href="#">View All</a>
+          </div>
+        </section>
+
+        <!-- <section for Instagram> -->
+        <section class="instagram" id="instagram">
+          <div class="card-container">
+
+            <div class="card">
+              <a href="https://www.instagram.com/reel/CogO9q5DamQ/?igshid=MzRlODBiNWFlZA==">
+                <img src="https://stackblitz.com/files/web-platform-vmxdcc/github/restunandita16/web-platform-vmxdcc/main/image/01.jpeg" alt="">
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="https://www.instagram.com/reel/CojvUJIre-G/?igshid=MzRlODBiNWFlZA=="><img src="https://stackblitz.com/files/web-platform-vmxdcc/github/restunandita16/web-platform-vmxdcc/main/image/02.jpeg" alt=""></a>
+            </div>
+
+            <div class="card">
+              <a href="https://www.instagram.com/reel/CpPl4GNgJBZ/?igshid=MzRlODBiNWFlZA=="><img src="https://stackblitz.com/files/web-platform-vmxdcc/github/restunandita16/web-platform-vmxdcc/main/image/03.jpeg" alt=""></a>
+            </div>
+
+            <div class="card">
+              <a href="https://www.instagram.com/reel/CsFnaNPBph-/?igshid=MzRlODBiNWFlZA=="><img src="https://stackblitz.com/files/web-platform-vmxdcc/github/restunandita16/web-platform-vmxdcc/main/image/04.jpeg" alt=""></a>
+            </div>
+
+            <div class="card">
+              <a href="https://www.instagram.com/reel/Cq6606qpPhf/?igshid=MzRlODBiNWFlZA=="><img src="https://stackblitz.com/files/web-platform-vmxdcc/github/restunandita16/web-platform-vmxdcc/main/image/05.jpeg" alt=""></a>
+            </div>
+
+            <div class="card">
+              <a href="https://www.instagram.com/reel/CojvUJIre-G/?igshid=MzRlODBiNWFlZA=="><img src="https://stackblitz.com/files/web-platform-vmxdcc/github/restunandita16/web-platform-vmxdcc/main/image/06.jpeg" alt=""></a>
+            </div>
+          </div>
+
+        </section>
+
+    </body>
+</html>
