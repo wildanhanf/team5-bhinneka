@@ -62,66 +62,40 @@ function toggleHamburger() {
   navBar.classList.toggle('opened');
 }
 
-// Filter Menu dan Search
-const filterButtons = document.getElementsByClassName("filter-menu");
-const menuItems = document.getElementsByClassName("menu");
-const searchInput = document.getElementById("search-input");
-const notFoundMessage = document.getElementById("not-found-message");
+const carouselSlide = document.querySelector('.carousel');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevButton = document.querySelector('.button.left');
+const nextButton = document.querySelector('.button.right');
+const carouselDots = document.querySelectorAll('.dot');
 
-for (let i = 0; i < filterButtons.length; i++) {
-  filterButtons[i].addEventListener("click", function() {
-    for (let j = 0; j < filterButtons.length; j++) {
-      filterButtons[j].classList.remove("active");
-    }
-    
-    this.classList.add("active");
+let currentIndex = 0;
+const slideWidth = carouselItems[0].clientWidth;
 
-    const filterValue = this.getAttribute("data-filter");
-
-    let foundItems = 0;
-    for (let k = 0; k < menuItems.length; k++) {
-      const menuItem = menuItems[k];
-      
-      if (menuItem.classList.contains(filterValue) || filterValue === "all") {
-        menuItem.style.display = "";
-        foundItems++;
-      } else {
-        menuItem.style.display = "none";
-      }
-    }
-
-    if (foundItems > 0) {
-      notFoundMessage.style.display = "none";
-    } else {
-      notFoundMessage.style.display = "block";
-    }
-  });
-}
-
-searchInput.addEventListener("input", function() {
-  const searchTerm = searchInput.value.toLowerCase();
-
-  let foundItems = 0;
-  for (let k = 0; k < menuItems.length; k++) {
-    const menuItem = menuItems[k];
-
-    const activeFilter = document.querySelector(".filter-menu.active");
-    const filterValue = activeFilter.getAttribute("data-filter");
-
-    if ((menuItem.classList.contains(filterValue) || filterValue === "all") &&
-        menuItem.textContent.toLowerCase().includes(searchTerm)) {
-      menuItem.style.display = "";
-      foundItems++;
-    } else {
-      menuItem.style.display = "none";
-    }
-  }
-
-  if (foundItems > 0) {
-    notFoundMessage.style.display = "none";
-  } else {
-    notFoundMessage.style.display = "block";
-  }
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1;
+    updateSlidePosition();
 });
 
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
+    updateSlidePosition();
+});
 
+carouselDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlidePosition();
+    });
+});
+
+function updateSlidePosition() {
+    carouselSlide.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+
+    carouselDots.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add('active-dot');
+        } else {
+            dot.classList.remove('active-dot');
+        }
+    });
+}
