@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header{
@@ -12,7 +13,7 @@ header{
 html,
 body {
   font-family: 'EB Garamond', serif;
-  background: #FFF260;
+  background: #FFEB02;
   margin: 0;
   padding: 0;
 }
@@ -556,4 +557,101 @@ span#next {
   span#next {
     right: -100px;
   }
+}
+
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+}
+.footer-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.footer-col ul {
+	list-style: none;
+}
+
+.footer {
+	background-color: #FF9927;
+    padding: 70px 0;
+}
+.footer-col {
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col img {
+	width: 80%;
+	margin-left: 20px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: black;
+    letter-spacing: 1px;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 700;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #FFEB02;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 18px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 500;
+	color: black;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	text-decoration: underline;
+}
+
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+	}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+	}
+}
+
+.footer-line {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem; 
+	border-color: #FFEB02; 
+	opacity: 0.8;
+}
+
+.footer-rights {
+    font-weight: 500;
+}
+
+@media(max-width: 1195px){
+	.legal{
+        width: 80%;
+        margin: 0 auto;
+	}
 }
