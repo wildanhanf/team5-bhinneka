@@ -442,6 +442,7 @@ button {
         flex-direction: column;
     }
     .filter-section {
+        margin: 0 auto;
         margin-bottom: 25px;
     }
 }
@@ -502,6 +503,9 @@ button {
     }
     .search-bar {
         width: 70%;
+    }
+    .menu-grid {
+        margin: 0 auto;
     }
 }
 
